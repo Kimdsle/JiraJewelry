@@ -19,7 +19,7 @@ import lombok.Setter;
 @AllArgsConstructor
 @Getter
 @Setter
-@Table(name = "Customer")
+@Table(name = "customer")
 public class Customer {
     @Id
     @GeneratedValue(generator = "customer-id-generator")

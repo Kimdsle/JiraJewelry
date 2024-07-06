@@ -19,26 +19,26 @@ import lombok.Setter;
 @AllArgsConstructor
 @Getter
 @Setter
-@Table(name = "users")
+@Table(name = "Users")
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "user_id")
+    @Column(name = "User_Id")
     private int user_Id;
     
     @Email
-    @Column(nullable = false, unique = true,name = "email")// Email không được null và phải là duy nhất
+    @Column(nullable = false, unique = true,name = "Email")// Email không được null và phải là duy nhất
     private String email;
 
-    @Column(nullable = false,name = "password")  // Mật khẩu không được null
+    @Column(nullable = false,name = "Password")  // Mật khẩu không được null
     private String password;
 
     @Min(1)
     @Max(6)
-    @Column(name = "role_id", nullable = false)
+    @Column(name = "Role_Id", nullable = false)
     private int role_Id;
     
-    @Column(name = "status", nullable = false)
+    @Column(name = "Status", nullable = false)
     private boolean status;
 
     public User(String email, String password, int role_Id, boolean status) {
